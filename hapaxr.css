@@ -4,6 +4,39 @@ body {
 	text-align: center;
 }
 
+#errormessage {
+	font-size: 30px;
+}
+
+#numresults {
+	font-size: 60px;
+	font-weight: bold;
+}
+
+#results {
+	font-size: 12px;
+	color: gray;
+}
+
+#scores {
+	margin-top:60px;
+	font-size:20px;
+	float:right;
+	font-family: arial;
+}
+
+.playerScore {
+	width: 130px;
+	float:left;
+	text-align: center;
+}
+
+.resultRecord {
+	margin-left:50px;
+	margin-right:50px;
+	float: left;
+}
+
 #header {
 	text-align: left;
 	width: 101%;
@@ -27,7 +60,9 @@ body {
 }
 
 #result_number {
-	padding-left: 35px;
+	/*padding-left: 10px;*/
+	/*padding-right: 10px;*/
+	width:185px;
 }
 
 #left_column_mini {
@@ -37,8 +72,12 @@ body {
 	background-color: #E6F5F0;
 }
 
+.floater {
+	margin-top: 25px;
+}
+
 #right_column_mini {
-	width: 600px;
+	width: 700px;
 	height: 110px;
 	padding-top: 0px;
 	float: left;
@@ -46,7 +85,7 @@ body {
 }
 
 #guess_input {
-	width: 600px;
+	width: 700px;
 	height: 110px;
 	margin-top: 0px;
 	background-color: #E1E3E3;
@@ -60,14 +99,14 @@ body {
 }
 
 #right_column {
-	width: 600px;
+	width: 700px;
 	height: 800px;
 	float: left;
 	background-color: #E6E8E7;
 }
 
 #guess_printout {
-	width: 600px;
+	/*width: 600px;*/
 	height: 90px;
 	background-color: #E1E3E3;
 }
@@ -78,37 +117,12 @@ body {
 	float: left;
 }
 
-#player1name {
+.playername {
 	float: left;
 	/*padding-left: 60px;*/
-}
-
-#player2name {
-	float: left;
-	/*padding-left: 50px;*/
-}
-
-#player3name {
-	float: left;
-	/*padding-left: 50px;*/
 }
 
 #search_term {
 	font-size: 20px;
 	margin-left: 230px;
-}
-
-#player1 {
-	float: left;
-	/*padding-left: 120px;*/
-}
-
-#player2 {
-	float: left;
-	/*padding-left: 160px;*/
-}
-
-#player3 {
-	float: left;
-	/*padding-left: 160px;*/
 }

@@ -1,88 +1,20 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-   "http://www.w3.org/TR/html4/strict.dtd">
-<HTML>
-   <HEAD>
-      <TITLE>hapaxr</TITLE>
-      <link rel="stylesheet" type="text/css" href="hapaxr.css">
-      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-      <link href="http://cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/jquery-editable/css/jquery-editable.css" rel="stylesheet"/>
-      <link href="http://vitalets.github.io/x-editable/assets/poshytip/tip-yellowsimple/tip-yellowsimple.css" rel="stylesheet"/>
-      <script src="http://vitalets.github.io/x-editable/assets/poshytip/jquery.poshytip.js"></script>
-      <script src="http://cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/jquery-editable/js/jquery-editable-poshytip.min.js"></script>
-      <script src="hapaxr.js"></script>
-   </HEAD>
+<!-- Hapaxr 2.0 w/ React.js -->
 
-   <BODY onkeypress="bodyKeyPress(event, this)">
-      <div id="header" style="width:1300px;">
-  			<img src="hapaxr_logo.png">
-         <div id="scores">
-            <div id="p1score" class="playerScore">0</div>
-            <div id="p2score" class="playerScore">0</div>
-            <div id="p3score" class="playerScore">0</div>
-            <div id="p4score" class="playerScore">0</div>
-         </div>
-  		</div>
-	  	
-      <!-- <div id="gameconfig">
-         <div id="playerNameInputs">
-            Player 1 Name: <input type="text" id="p1nameInput"></input><br>
-         </div>
-         <a href="javascript:addPlayerName()" id="addPlayerLink">Add Player</a>
-      </div> -->
-
-      <div id="maingame">
-	  		
-      		<div id="left_column_mini">
-               <div class="floater">
-         			<div style="float: left; font-size: 40pt;">"</div>
-         			<input style="font-size:45px;float: left;" placeholder="Search String" type="text" id="searchboxinput">
-                  <div style="float: left; font-size: 40pt;">"</div>
-                  <a href="javascript:go();" style="font-size:45px;font-weight:bold;font-family:arial;margin-top:15px;">GO</a>
-               </div>
-      		</div>
-
-      		<div id="right_column_mini">
-      			<div id="guess_input">
- 						<div id="result_number">
- 							<div id="numresults"></div>
-                     <span id="results">results</span>
- 						</div>
- 						<div class="playername">
- 							<h3 style="text-align: center; border:2px transparent solid;" id="p1name">Player 1</h3>
- 							<input type="text" id="player1guess">
- 						</div>
- 						<div class="playername">
- 							<h3 style="text-align: center; border:2px transparent solid;" id="p2name">Player 2</h3>
- 							<input type="text" id="player2guess">
- 						</div>
- 						<div class="playername">
- 							<h3 style="text-align: center; border:2px transparent solid;" id="p3name">Player 3</h3>
- 							<input type="text" id="player3guess">
- 						</div>
-                  <div class="playername">
-                     <h3 style="text-align: center; border:2px transparent solid;" id="p4name">Player 4</h3>
-                     <input type="text" id="player4guess">
-                  </div>
- 					</div>
-      		</div>
-
-	  		<div id="left_column">
-            Use Quotes <input type="checkbox" id="usequotesCB"></input>
-            <div id="errormessage"></div>
-	  			<div id="search_results"></div>
-	  		</div>
-
-	  		<div id="right_column">
-
- 					
-
-	  			
-	  		</div>
-	  </div>
-      
-
-   </BODY>
-
-
-</HTML>
-
+<html>
+  <head>
+    <title>Hello React</title>
+    <script src="http://fb.me/react-0.8.0.js"></script>
+    <script src="http://fb.me/JSXTransformer-0.8.0.js"></script>
+    <script src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
+  </head>
+  <body>
+    <div id="content"></div>
+    <script type="text/jsx">
+      /**
+       * @jsx React.DOM
+       */
+      // The above declaration must remain intact at the top of the script.
+      // Your code here
+    </script>
+  </body>
+</html>

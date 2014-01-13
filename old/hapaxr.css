@@ -1,0 +1,128 @@
+body {
+	margin-top: 0px;
+	margin-left: 0px;
+	text-align: center;
+}
+
+#errormessage {
+	font-size: 30px;
+}
+
+#numresults {
+	font-size: 60px;
+	font-weight: bold;
+}
+
+#results {
+	font-size: 12px;
+	color: gray;
+}
+
+#scores {
+	margin-top:60px;
+	font-size:20px;
+	float:right;
+	font-family: arial;
+}
+
+.playerScore {
+	width: 130px;
+	float:left;
+	text-align: center;
+}
+
+.resultRecord {
+	margin-left:50px;
+	margin-right:50px;
+	float: left;
+}
+
+#header {
+	text-align: left;
+	width: 101%;
+	height: 85px;
+	background-color: #F3F3F3;
+}
+
+#input_subheader {
+	text-align: left;
+	width: 101%;
+	height: 85px;
+	background-color: #FFFFFF;
+}
+
+#container {
+	text-align: left;
+	width: 1200px;
+	height: 1000px;
+	margin: 0 auto;
+	background-color: #E322C0;
+}
+
+#result_number {
+	/*padding-left: 10px;*/
+	/*padding-right: 10px;*/
+	width:185px;
+}
+
+#left_column_mini {
+	width: 600px;
+	height: 110px;
+	float: left;
+	background-color: #E6F5F0;
+}
+
+.floater {
+	margin-top: 25px;
+}
+
+#right_column_mini {
+	width: 700px;
+	height: 110px;
+	padding-top: 0px;
+	float: left;
+	background-color: #DCEEF7;
+}
+
+#guess_input {
+	width: 700px;
+	height: 110px;
+	margin-top: 0px;
+	background-color: #E1E3E3;
+}
+
+#left_column {
+	width: 600px;
+	height: 800px;
+	float: left;
+	background-color: #F0F2F1;
+}
+
+#right_column {
+	width: 700px;
+	height: 800px;
+	float: left;
+	background-color: #E6E8E7;
+}
+
+#guess_printout {
+	/*width: 600px;*/
+	height: 90px;
+	background-color: #E1E3E3;
+}
+
+#result_number {
+	font-size: 30px;
+	font-family: arial;
+	float: left;
+}
+
+.playername {
+	float: left;
+	/*padding-left: 60px;*/
+}
+
+#search_term {
+	font-size: 20px;
+	margin-left: 230px;
+}

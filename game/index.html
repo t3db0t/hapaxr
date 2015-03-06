@@ -1,0 +1,132 @@
+<!-- Hapaxr 2.0 w/ React.js -->
+
+<html>
+  <head>
+    <title>Hapaxr: The Game of Google Guesses</title>
+    <script src="http://fb.me/react-0.8.0.js"></script>
+    <script src="http://fb.me/JSXTransformer-0.8.0.js"></script>
+    <script src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="hapaxr.css">
+  </head>
+  <body>
+    <div id="content"></div>
+    <script type="text/jsx">
+      /**
+       * @jsx React.DOM
+       */
+      
+      var guessInput = React.createClass({
+        getInitialState: function(){
+            return {inputVal: 0};
+        },
+        handleChange: function(e){
+            if(e.target.value == ""){
+                e.target.value = 0;
+            } else {
+                e.target.value = parseInt(e.target.value);
+            }
+            this.props.handleChange(e);
+        },
+        validate: function (evt) {
+            var theEvent = evt || window.event;
+            var key = theEvent.keyCode || theEvent.which;
+            key = String.fromCharCode( key );
+            var regex = /[0-9]/;
+            if( !regex.test(key) ) {
+                theEvent.returnValue = false;
+                if(theEvent.preventDefault) theEvent.preventDefault();
+            }
+        },
+        render: function() {
+            return (
+                <div>
+                    <input type="text" className="guessInput" name={this.props.name} onChange={this.handleChange} onKeyPress={this.validate}/>
+                </div>
+            );
+        }
+    });
+
+    // <phraseRecord numResults="4005" query="Meritorious calumny" guesses={guesses} />
+    var phraseRecord = React.createClass({
+        render: function(){
+            var guessNodes = this.props.guesses.map(function(g){
+                return <div className="recordGuess">{g.val}</div>;
+            });
+            return (
+                <div className="phraseRecord">
+                    <div className="recordResults">{this.props.numResults}</div>
+                    <div className="recordQuery">{this.props.query}</div>
+                    {guessNodes}
+                </div>
+            );
+        }
+    });
+
+    var recordList = React.createClass({
+        render: function(){
+            var recordNodes = this.props.records.map(function(r){
+                var guessNodes = r.guesses.map(function(g){
+                    return <div className="recordGuess">{g}</div>;
+                });
+                var numdigits = r.numResults.toString().length;
+                var fs = (numdigits / -0.34) + 40;
+                var numStyle = {"font-size":fs};
+                return (
+                    <div className="phraseRecord">
+                        <div className="recordResults" style={numStyle}>{r.numResults}</div>
+                        <div className="recordQuery">{r.query}</div>
+                        {guessNodes}
+                    </div>
+                );
+            });
+            return <div className="recordList">{recordNodes}</div>;
+        }
+    });
+
+    var Hapaxr = React.createClass({
+        getInitialState: function() {
+            return {query:"", numResults:0, guesses: [0,0,0,0], records:[]};
+        },
+        handleChange: function(e){
+            g = this.state.guesses.slice(0);;
+            g[(parseInt(e.target.name)-1)] = parseInt(e.target.value);
+            this.setState({guesses: g});
+        },
+        submitClick: function() {
+            console.log("submitClick",this.state);
+            // push this query onto the records array
+            var r = {guesses: this.state.guesses, query: this.state.query, numResults: this.state.numResults};
+            var n = this.state.records.slice();
+            n.push(r);
+            this.setState({records:n});
+        },
+        queryChange: function(e){
+            this.setState({query:e.target.value});
+        },
+        numResultsChange: function(e){
+            this.setState({numResults:e.target.value});
+        },
+        render: function() {
+            return (
+                <div>Query: <input type="text" onChange={this.queryChange}></input><br/>
+                    Number of Results: <input type="text" onChange={this.numResultsChange}></input><br/>
+                    <guessInput name="1" num="1" handleChange={this.handleChange} />
+                    <guessInput name="2" num="2" handleChange={this.handleChange} />
+                    <guessInput name="3" num="3" handleChange={this.handleChange} />
+                    <guessInput name="4" num="4" handleChange={this.handleChange} />
+                    <br/>
+                    <a href="#" onClick={this.submitClick}>Submit</a>
+                    <br/>
+                    <br/>
+                    <recordList records={this.state.records} />
+                </div>
+            );
+        }
+    });
+     
+    React.renderComponent(<Hapaxr />, document.getElementById('content'));
+    </script>
+  <div id="content"></div>
+  </body>
+</html>

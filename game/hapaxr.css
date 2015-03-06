@@ -1,0 +1,25 @@
+body {
+    font-family:arial;
+}
+
+.phraseRecord {
+    height: 60px
+}
+
+.recordResults {
+    float:left;
+    /* font-size: 30px; */
+    width: 80px;
+    height: 60px;
+}
+
+.recordGuess {
+    width: 60px;
+    float: left;
+}
+
+.guessInput {
+    float: left;
+    margin: 10px;
+    width: 40px;
+}
